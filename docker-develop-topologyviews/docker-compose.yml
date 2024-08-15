@@ -3,7 +3,7 @@ services:
   netbox:
     build:
       context: ../
-      dockerfile: docker-develop-topology-views/Dockerfile
+      dockerfile: docker-develop-topologyviews/Dockerfile
     command: >
       sh -c "python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
@@ -22,7 +22,7 @@ services:
   worker:
     build:
       context: ../
-      dockerfile: docker-develop-topology-views/Dockerfile
+      dockerfile: docker-develop-topologyviews/Dockerfile
     command: sh -c "python manage.py rqworker"
     depends_on:
       - netbox
