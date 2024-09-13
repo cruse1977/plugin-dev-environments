@@ -23,7 +23,11 @@ WORKDIR /source
 COPY . /source
 
 #RUN pip install -r requirements.txt
+{% if install_method =="g" %}
 RUN python -m pip install --editable .
+{% else %}
+RUN python -m pip install {{ netbox_plugin }}
+{% endif %}
 {% if netbox_branching %}
 RUN python -m pip install netboxlabs-netbox-branching
 {% endif %}

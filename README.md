@@ -1,11 +1,26 @@
+# plugin-dev-environments
+
+## Purpose
+
+ Script to generate docker environments to provide editable (or not) plugin development environments 
+
+ * selectable netbox version
+ * optional netbox-branching installation 
+ * git or pip install of selected plugin
+ 
+# Usage
+
+```
 cd build-environment/
-
 ./run-builder.sh
+```
 
+ Then follow inbuilt instructions.
 
-follow the white rabbit
+# Tip:
 
-if you ever need to kill everything docker
+if you ever need to remove all docker images/volumes (warning, danger, etc) 
+
 ```
 #!/bin/bash
 
