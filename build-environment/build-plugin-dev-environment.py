@@ -15,7 +15,7 @@ PLUGINS = {
     'netbox_topology_views': {
         'url':  'https://github.com/netbox-community/netbox-topology-views',
         'dir':  'netbox-topology-views'
-    }
+    },
     'netbox_inventory': {
          'url': 'https://github.com/ArnesSI/netbox-inventory',
          'dir': 'netbox-inventory'
