@@ -7,6 +7,11 @@
  * selectable netbox version
  * optional netbox-branching installation 
  * git or pip install of selected plugin
+
+# Requirements
+
+- docker compose
+- venv
  
 # Usage
 
