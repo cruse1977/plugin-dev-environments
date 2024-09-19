@@ -101,13 +101,18 @@ i_method="v"
 while i_method not in ["g","p"]:
     i_method = input("< Install via git, or pip ? (g/p): ").lower()
 
+if i_method=="g":
+    i_branch = input("< Enter a branch name or leave blank for the default: ")
 
 if os.path.isdir(f"{PLUGINS[i_plugin_name]['dir']}"):
     os.system(f"rm -rf {PLUGINS[i_plugin_name]['dir']}")
 
 if i_method=="g":
     print("## CLONING REPO ...")
-    os.system(f"git clone {PLUGINS[i_plugin_name]['url']}")
+    if len(i_branch) > 0:
+        os.system(f"git clone --branch={i_branch} {PLUGINS[i_plugin_name]['url']}")
+    else:
+        os.system(f"git clone {PLUGINS[i_plugin_name]['url']}")
 else:
     os.system(f"mkdir {PLUGINS[i_plugin_name]['dir']}")
 
