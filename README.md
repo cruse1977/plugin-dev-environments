@@ -6,7 +6,7 @@
 
  * selectable netbox version
  * optional netbox-branching installation 
- * git or pip install of selected plugin
+ * git or pip install of selected plugin (and branch if git)
  
 # Usage
 
